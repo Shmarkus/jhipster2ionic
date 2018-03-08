@@ -54,7 +54,7 @@ import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';\n\
 import {SplashScreen} from '@ionic-native/splash-screen';\n\
 import {StatusBar} from '@ionic-native/status-bar';\n\
 $(cat $FRANKENPRJ/src/app/app.module.ts)" > $FRANKENPRJ/src/app/app.module.ts
-sed -i -E "s/JhiMainComponent/IonicApp/" $FRANKENPRJ/src/app/app.module.ts
+sed -i -E "s/\[ JhiMainComponent \]/\[IonicApp\]/" $FRANKENPRJ/src/app/app.module.ts
 sed -i -E "s/imports\: \[/imports: \[\n\tIonicModule.forRoot\(JhiMainComponent\),/" $FRANKENPRJ/src/app/app.module.ts
 sed -i -E "s/providers\: \[/providers: \[\n\tStatusBar,\n\tSplashScreen,\n\t\{provide: ErrorHandler, useClass: IonicErrorHandler\},/" $FRANKENPRJ/src/app/app.module.ts
 
